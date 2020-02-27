@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>2048</title>
+    <url>/2019/05/22/blog03/</url>
+    <content><![CDATA[<p><strong>jQuery写2048中遇到的小问题记录</strong></p>
+<p><strong>如下</strong>：<br>1.不要漏写 ‘#’ 或 ‘.’ 这样的“小玩意儿”。</p>
+<a id="more"></a>
+
+<p>2.<strong><em>var arr=new Array()</em></strong> 这玩意儿webstorm一直给我报错，<br><img src="https://img-blog.csdnimg.cn/20190517202044305.png" alt="图片勿转"><br>一直想不出哪里有问题，后来知道了：</p>
+<ul>
+<li>用new关键字去内存开辟一个存储地址比较耗资源,耗内存</li>
+<li>而字面量方式直接在内存开辟一个存储字段相对简单,不耗资源</li>
+</ul>
+<p>所以应该直接写成这样 ：<strong><em>var arr = [ ]</em></strong> ;</p>
+<p>5.19更新<br><br/><br>3.结果没啥问题了，三四天做完了，还上传到了github，（嘿嘿(●ˇ∀ˇ●)。。。<br>贼方便！然后就贴上地址啦：<a href="https://agneei.github.io/2048-game.github.io/" target="_blank" rel="noopener">快来玩小游戏啦，停不下来~</a></p>
+<p>over~（(￣▽￣)”<br>（ps:这是pc端的）</p>
+<p>5.22更新<br>移动端已更。</p>
+<p>5.25<br>略作修剪。</p>
+]]></content>
+      <tags>
+        <tag>JQuery</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>前端小白要知道的小技巧</title>
+    <url>/2018/12/07/blog02/</url>
+    <content><![CDATA[<h2 id="如何使用webstorm提高敲代码速度"><a href="#如何使用webstorm提高敲代码速度" class="headerlink" title="如何使用webstorm提高敲代码速度"></a>如何使用webstorm提高敲代码速度</h2><p><strong>哒哒哒</strong> ：本来以为用webstorm就已经很方便打代码了，殊不知原来还隐藏这种操作！Σ(っ °Д °;)っ（大神勿喷..<br><strong>如下：</strong><br>1.快速建立html格式</p>
+<a id="more"></a>
+<ul>
+<li>居然仅需 !+Tab ！！！</li>
+<li>以及 html + Tab<br>就能快速创好格式了（赞b(￣▽￣)d</li>
+</ul>
+<p>2.轻松添加id、class、文本和属性</p>
+<ul>
+<li><p>连续输入p.bar，就会出现：<br><img src="https://img-blog.csdnimg.cn/20190515210239155.png" alt="无描述"></p>
+</li>
+<li><p>类似地，输入h1{foo}和a[#]   （亲测<br><img src="https://img-blog.csdnimg.cn/20190515210501614.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20190515210916223.png" alt="在这里插入图片描述"></p>
+</li>
+</ul>
+<p>3.嵌套</p>
+<blockquote>
+<p>：子元素符号，表示嵌套的元素<br>       +：同级标签符号<br>       ^：可以使该符号前的标签提升一行 </p>
+</blockquote>
+<p>4.分组</p>
+<ul>
+<li>输入(.foo&gt;h1)+(.bar&gt;h2)：<br><img src="https://img-blog.csdnimg.cn/20190515211713488.png" alt="在这里插入图片描述"></li>
+</ul>
+<p>5.定义多个元素</p>
+<ul>
+<li>输入ul&gt;li*3,会出现：<br><img src="https://img-blog.csdnimg.cn/2019051521184151.png" alt="在这里插入图片描述"></li>
+</ul>
+<p>好了就到这里了(●’◡’●)</p>
+<p>。。哦对了Sublime也一样适用哦~</p>
+]]></content>
+      <tags>
+        <tag>杂谈</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C的合法标识符</title>
+    <url>/2018/11/30/blog01/</url>
+    <content><![CDATA[<p>又碰到字符串问题，经常在这上面出错，今天借这道题统一整理一下。</p>
+<ul>
+<li>字符串输入函数gets();<a id="more"></a>
+  <em>gets()函数从标准输入（键盘）读入一行数据，所谓读取一行，就是遇到换行符就返回。<em>gets()函数并不读取换行符’\n’，它会把换行符替换成空字符’\0’</em>，作为c语言字符串结束的标志(与scanf不同的是，scanf()遇到空格就结束输入，后面的不算)。</em></li>
+<li>字符串输出函数puts();<br>  *puts()函数用来向标准输出设备（屏幕）输出字符串并换行。<br>回到题目：<br><img src="https://img-blog.csdnimg.cn/20181130201600216.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzg0OTQzMA==,size_16,color_FFFFFF,t_70" alt="2024">代码如下：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    int n,i,j;</span><br><span class="line">    int flag;</span><br><span class="line">    char a[50];</span><br><span class="line">    scanf(&quot;%d&quot;,&amp;n);</span><br><span class="line">    getchar();</span><br><span class="line">    while(n--)&#123;</span><br><span class="line">  gets(a);</span><br><span class="line">  flag&#x3D;0;</span><br><span class="line">  if((a[0]&gt;&#x3D;65&amp;&amp;a[0]&lt;&#x3D;90)||(a[0]&gt;&#x3D;97&amp;&amp;a[0]&lt;&#x3D;122)||a[0]&#x3D;&#x3D;&#39;_&#39;)</span><br><span class="line">  &#123;</span><br><span class="line">   for(i&#x3D;1;a[i]!&#x3D;&#39;\0&#39;;i++)</span><br><span class="line">   &#123;</span><br><span class="line">    if((a[i]&gt;&#x3D;65&amp;&amp;a[i]&lt;&#x3D;90)||(a[i]&gt;&#x3D;97&amp;&amp;a[i]&lt;&#x3D;122)||(a[i]&gt;&#x3D;48&amp;&amp;a[i]&lt;&#x3D;57)||a[i]&#x3D;&#x3D;&#39;_&#39;)</span><br><span class="line">     flag&#x3D;1;</span><br><span class="line">    else&#123;</span><br><span class="line">     flag&#x3D;-1;</span><br><span class="line">     break;&#x2F;&#x2F;这里注意遇到非法标识符结束，否则会被覆盖。</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br><span class="line">  &#125;</span><br><span class="line">   if(flag&#x3D;&#x3D;1)</span><br><span class="line">    printf(&quot;yes\n&quot;);</span><br><span class="line">   else</span><br><span class="line">    printf(&quot;no\n&quot;);</span><br><span class="line"> &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>补充getchar()函数：<br><code>当用户键入回车之后,getchar才开始从stdio流中每次读入一个字符.getchar函数的返回值是用户输入的第一个字符的ASCII码,如出错返回-1,且将用户输入的字符回显到屏幕.如用户在按回车之前输入了不止一个字符,其他字符会保留在键盘缓存区中,等待后续getchar调用读取.也就是说,后续的getchar调用不会等待用户按键,而直接读取缓冲区中的字符,直到缓冲区中的字符读完为后,才等待用户按键.</code><br>字符串其他问题会继续探索。</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>C语言</tag>
+      </tags>
+  </entry>
+</search>
