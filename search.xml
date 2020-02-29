@@ -1,9 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>blog04</title>
+    <title>Vue.js学习笔记（一）</title>
     <url>/2020/02/29/blog04/</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[<h2 id="Vue-js中常用指令"><a href="#Vue-js中常用指令" class="headerlink" title="Vue.js中常用指令"></a>Vue.js中常用指令</h2><a id="more"></a>
+<h3 id="1-什么是指令？"><a href="#1-什么是指令？" class="headerlink" title="1.什么是指令？"></a>1.什么是指令？</h3><h4 id="用来扩展html标签的功能"><a href="#用来扩展html标签的功能" class="headerlink" title="用来扩展html标签的功能"></a>用来扩展html标签的功能</h4><pre><code>angular中常用的指令：
+    ng-model
+    ng-repeat
+    ng-click
+    ng-show/ng-hide
+    ng-if</code></pre><h3 id="2-vue中常用的指令"><a href="#2-vue中常用的指令" class="headerlink" title="2.vue中常用的指令"></a>2.vue中常用的指令</h3><ul>
+<li>v-model<br>  双向数据绑定，一般用于表单元素</li>
+<li>v-for<br>  对数组或对象进行循环操作，使用的是v-for，不是v-repeat<br>  注：在vue1.0中提供了隐式变量，如$index、$key在vue2.0中去除了隐式变量，已被废除</li>
+<li>v-on<br>  用来绑定事件，用法：v-on:事件=”函数”</li>
+<li>v-show/v-if<br>  用来显示或隐藏元素，v-show是通过display实现，v-if是每次删除后再重新创建，与angular中类似</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>前端</tag>
+      </tags>
   </entry>
   <entry>
     <title>2048</title>

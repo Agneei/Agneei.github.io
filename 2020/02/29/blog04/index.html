@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="前端," />
 
 
 
@@ -79,15 +79,16 @@
 
 
 
-<meta name="description" content="Nothing">
+<meta name="description" content="Vue.js中常用指令">
 <meta property="og:type" content="article">
-<meta property="og:title" content="blog04">
+<meta property="og:title" content="Vue.js学习笔记（一）">
 <meta property="og:url" content="http://yoursite.com/2020/02/29/blog04/index.html">
 <meta property="og:site_name" content="Agneei&#39;s blog">
-<meta property="og:description" content="Nothing">
+<meta property="og:description" content="Vue.js中常用指令">
 <meta property="article:published_time" content="2020-02-29T04:38:54.000Z">
-<meta property="article:modified_time" content="2020-02-29T04:38:54.973Z">
+<meta property="article:modified_time" content="2020-02-29T08:43:27.364Z">
 <meta property="article:author" content="Agneei">
+<meta property="article:tag" content="前端">
 <meta name="twitter:card" content="summary">
 
 
@@ -124,7 +125,7 @@
 
 
 
-  <title>blog04 | Agneei's blog</title>
+  <title>Vue.js学习笔记（一） | Agneei's blog</title>
   
 
 
@@ -315,7 +316,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">blog04</h1>
+          <h1 class="post-title" itemprop="name headline">Vue.js学习笔记（一）</h1>
         
 
         <div class="post-meta">
@@ -370,7 +371,19 @@
       
 
       
-        
+        <h2 id="Vue-js中常用指令"><a href="#Vue-js中常用指令" class="headerlink" title="Vue.js中常用指令"></a>Vue.js中常用指令</h2><a id="more"></a>
+<h3 id="1-什么是指令？"><a href="#1-什么是指令？" class="headerlink" title="1.什么是指令？"></a>1.什么是指令？</h3><h4 id="用来扩展html标签的功能"><a href="#用来扩展html标签的功能" class="headerlink" title="用来扩展html标签的功能"></a>用来扩展html标签的功能</h4><pre><code>angular中常用的指令：
+    ng-model
+    ng-repeat
+    ng-click
+    ng-show/ng-hide
+    ng-if</code></pre><h3 id="2-vue中常用的指令"><a href="#2-vue中常用的指令" class="headerlink" title="2.vue中常用的指令"></a>2.vue中常用的指令</h3><ul>
+<li>v-model<br>  双向数据绑定，一般用于表单元素</li>
+<li>v-for<br>  对数组或对象进行循环操作，使用的是v-for，不是v-repeat<br>  注：在vue1.0中提供了隐式变量，如$index、$key在vue2.0中去除了隐式变量，已被废除</li>
+<li>v-on<br>  用来绑定事件，用法：v-on:事件=”函数”</li>
+<li>v-show/v-if<br>  用来显示或隐藏元素，v-show是通过display实现，v-if是每次删除后再重新创建，与angular中类似</li>
+</ul>
+
       
     </div>
     
@@ -384,6 +397,12 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag"><i class="fa fa-tag"> 前端</i></a>
+          
+        </div>
       
 
       
@@ -454,8 +473,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -487,7 +515,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -510,6 +538,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Vue-js中常用指令"><span class="nav-number">1.</span> <span class="nav-text">Vue.js中常用指令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-什么是指令？"><span class="nav-number">1.1.</span> <span class="nav-text">1.什么是指令？</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#用来扩展html标签的功能"><span class="nav-number">1.1.1.</span> <span class="nav-text">用来扩展html标签的功能</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-vue中常用的指令"><span class="nav-number">1.2.</span> <span class="nav-text">2.vue中常用的指令</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -554,7 +598,7 @@
 
   <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">全站总字数 : 901</span>
+  <span class="post-count">全站总字数 : 1.1k</span>
 </div>
 
 
